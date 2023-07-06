@@ -1,0 +1,92 @@
+{
+  "name": "saas-retail-web",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "start": "vite",
+    "start:beta": "vite --mode beta",
+    "start:private": "vite --mode private",
+    "start:gray": "vite --mode gray",
+    "dev": "vite",
+    "build:dev": "vite build --mode development",
+    "build:beta": "vite build --mode beta",
+    "build:prod": "vite build --mode production",
+    "build:private": "vite build --mode private",
+    "build:gray": "vite build --mode gray",
+    "preview": "vite preview",
+    "eslint:comment": "使用 ESLint 检查并自动修复 src 目录下所有扩展名为 .js 和 .vue 的文件",
+    "eslint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "prettier:comment": "自动格式化当前目录下的所有文件",
+    "prettier": "prettier .  --write",
+    "commit:comment": "引导设置规范化的提交信息",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "npm run eslint",
+      "npm run prettier"
+    ]
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@formily/core": "^2.2.24",
+    "@formily/element-plus": "^1.1.0-beta.0",
+    "@formily/vue": "^2.2.24",
+    "@vueuse/core": "^8.2.0",
+    "ali-oss": "^6.17.1",
+    "axios": "^0.26.1",
+    "clipboard": "^2.0.11",
+    "echarts": "^5.4.1",
+    "element-plus": "^2.2.27",
+    "font-awesome": "^4.7.0",
+    "js-cookie": "^3.0.1",
+    "js-export-excel": "^1.1.4",
+    "jsencrypt": "^3.2.1",
+    "pinia": "^2.0.12",
+    "qs": "^6.11.0",
+    "vue": "^3.2.25",
+    "vue-grid-layout": "^3.0.0-beta1",
+    "vue-prism-editor": "^1.3.0",
+    "vue-router": "^4.0.14",
+    "vue3-json-viewer": "^2.2.2",
+    "vuedraggable": "^4.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@iconify-json/ep": "^1.1.7",
+    "@types/ali-oss": "^6.16.8",
+    "@types/js-cookie": "^3.0.2",
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "autoprefixer": "^10.4.12",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.3.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "postcss": "^8.4.16",
+    "prettier": "^2.6.1",
+    "sass": "^1.55.0",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.5.4",
+    "unplugin-auto-import": "^0.11.2",
+    "unplugin-icons": "^0.14.10",
+    "unplugin-vue-components": "^0.22.7",
+    "vite": "^2.8.0",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vue-tsc": "^0.29.8"
+  }
+}
